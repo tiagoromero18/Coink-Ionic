@@ -1,10 +1,25 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
 <ion-content id="content">
   <div id="intro" class="image-container">
-    <img src="assets/homeImg/coinkHome.png" alt="Coink Home">
+    <img src="assets/homeImg/coinkhomeimg.svg" alt="Coink Home">
   </div>
   <div id="main-content" class="hidden">
-    <div class="image-container">
-      <img src="assets/homeImg/coinkHome.png" alt="Coink Home">
+    <!-- Primera sección con imagen centrada -->
+    <div style="display: flex; justify-content: center; align-items: flex-end; height: 33.33vh;">
+      <img src="assets/homeImg/coinkhomeimg.svg" alt="Centered Image">
+    </div>
+
+    <!-- Segunda sección con texto centrado en la parte superior -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 33.33vh;">
+      <h1 style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 18pt; color: #1EEA00;"> LA ALCANCÍA QUE SIEMPRE TE ACOMPAÑA </h1>
+    </div>
+
+    <!-- Tercera sección con dos botones centrados uno debajo del otro -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 33.33vh; flex-direction: column;">
+      <ion-button expand="block">Block</ion-button> <ion-button expand="full">Full</ion-button>
     </div>
   </div>
 </ion-content>
