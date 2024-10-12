@@ -25,6 +25,6 @@ export class legalInfoPage {
   }
 
   accept(){
-    this.navCtrl.navigateForward('/home')
+    this.navCtrl.navigateForward('/welcome')
   }
 }

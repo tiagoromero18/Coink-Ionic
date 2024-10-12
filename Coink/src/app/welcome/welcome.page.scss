@@ -1,0 +1,62 @@
+ion-content {
+    --background: rgba(211, 211, 211, 0.8); /* Gris opaco */
+  }
+
+
+  .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Fondo blanco para el contenedor */
+    width: 80vw; /* Ancho del contenedor relativo al viewport */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+  }
+
+  .container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    font-size: 20px;
+    color: #004B40;
+  }
+
+  .container p {
+    margin: 10px 0 20px;
+    font-family: 'Avenir LT Std', sans-serif;
+    font-size: 16px;
+  }
+
+  .register-button {
+    height: 50px;
+    width: 100%; /* Full width minus the container's left and right margins */
+    margin-bottom: 16px; /* Space between buttons */
+    --background: #1EEA00;
+    --color: #004B40;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 40px;
+  }
+
+  .custom-container {
+    margin-left: 24px;
+    margin-right: 24px;
+  }

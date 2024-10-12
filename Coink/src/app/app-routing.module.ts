@@ -22,6 +22,11 @@ const routes: Routes = [
       m.LegalInfoPageModule)
   },
   {
+    path: 'welcome',
+    loadChildren: () => import('./welcome/welcome.module').then(m =>
+      m.WelcomePageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
