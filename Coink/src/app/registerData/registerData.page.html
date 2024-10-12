@@ -1,0 +1,86 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Avenir+LT+Std:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons style="margin-left: 5px;" slot="start">
+        <img src="assets/numberImg/back.png" alt="Centered Image" (click)="back()">
+        </ion-buttons>
+        <div>
+            <ion-title style="color: #004B40; font-family: 'Montserrat', sans-serif; font-size: 16px; text-align: center;" > DATOS DE CUENTA </ion-title>
+        </div>
+            <img style="display: flex; margin: auto;" src="assets/dataImg/groupTwo.svg" alt="Centered Image">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="underHeader">
+        <img src="assets/dataImg/OinkM.svg" alt="Centered Image"> <p>Para comenzar, por favor ingresa <strong> tu número celular. </strong> </p>
+    </div>
+
+    <div class="green-line"></div>
+
+    <form [formGroup]="form" (ngSubmit)="register()">
+        <div class="custom-container">
+            <h2 class="form-titles">Documento de identidad</h2>
+            <ion-list>
+                <ion-item>
+                <ion-select class="form-box" formControlName="documentType" label="Tipo de documento" label-placement="floating" aria-label="DocumentType" interface="popover" placeholder="Tipo de documento">
+                    <ion-select-option value="Tarjeta de identidad">Tarjeta de identidad</ion-select-option>
+                    <ion-select-option value="Cedula de ciudadania">Cedula de ciudadania</ion-select-option>
+                    <ion-select-option value="Cedula de extranjeria">Cedula de extranjeria</ion-select-option>
+                </ion-select>
+                </ion-item>
+                <div *ngIf="form.controls['documentType'].touched && form.controls['documentType'].invalid" class="error-message">Seleccione un tipo de documento válido.</div>
+            </ion-list>
+    
+            <ion-input class="form-box" formControlName="documentNumber" label="Numero de documento" label-placement="floating" fill="solid" placeholder="Numero de documento" type="number"></ion-input>
+            <div *ngIf="form.controls['documentNumber'].touched && form.controls['documentNumber'].invalid" class="error-message">Ingrese un número de documento válido.</div>
+            
+            <ion-input class="form-box" formControlName="issueDate" label="Fecha de expedición del documento" label-placement="floating" fill="solid" placeholder="Fecha de expedición del documento" type="date"></ion-input>
+            <div *ngIf="form.controls['issueDate'].touched && form.controls['issueDate'].invalid" class="error-message">Ingrese una fecha de expedición válida.</div>
+    
+            <ion-input class="form-box" formControlName="birthDate" label="Fecha de nacimiento" label-placement="floating" fill="solid" placeholder="Fecha de nacimiento" type="date"></ion-input>
+            <div *ngIf="form.controls['birthDate'].touched && form.controls['birthDate'].invalid" class="error-message">Ingrese una fecha de nacimiento válida.</div>
+    
+            <ion-list>
+                <ion-item>
+                <ion-select class="form-box" formControlName="gender" label="Genero" label-placement="floating" aria-label="Gender" interface="popover" placeholder="Genero">
+                    <ion-select-option value="Femenino">Femenino</ion-select-option>
+                    <ion-select-option value="Masculino">Masculino</ion-select-option>
+                    <ion-select-option value="Otro">Otro</ion-select-option>
+                </ion-select>
+                </ion-item>
+                <div *ngIf="form.controls['gender'].touched && form.controls['gender'].invalid" class="error-message">Seleccione un género válido.</div>
+            </ion-list>
+    
+            <h2 class="form-titles">Configura tu cuenta</h2>
+    
+            <ion-input class="form-box" formControlName="email" label="Correo electrónico" label-placement="floating" fill="solid" placeholder="Correo electrónico" type="email"></ion-input>
+            <div *ngIf="form.controls['email'].touched && form.controls['email'].invalid" class="error-message">Ingrese un correo electrónico válido.</div>
+    
+            <ion-input class="form-box" formControlName="confirmEmail" label="Confirmar correo electrónico" label-placement="floating" fill="solid" placeholder="Confirmar correo electrónico" type="email"></ion-input>
+            <div *ngIf="form.controls['confirmEmail'].touched && form.controls['confirmEmail'].invalid" class="error-message">Los correos electrónicos no coinciden.</div>
+    
+            <ion-item>
+                <ion-input id="pin" class="form-box" formControlName="pin" label="PIN de seguridad" label-placement="floating" fill="solid" placeholder="PIN de seguridad" type="password" maxlength="4" inputmode="numeric"></ion-input>
+                <ion-icon id="pin-icon" slot="end" name="eye" (click)="togglePassword('pin')"></ion-icon>
+            </ion-item>
+            <div *ngIf="form.controls['pin'].touched && form.controls['pin'].invalid" class="error-message">Ingrese un PIN válido de 4 dígitos.</div>
+    
+            <ion-item>
+                <ion-input id="confirmPin" class="form-box" formControlName="confirmPin" label="Confirmar PIN de seguridad" label-placement="floating" fill="solid" placeholder="Confirmar PIN de seguridad" type="password" maxlength="4" inputmode="numeric"></ion-input>
+                <ion-icon id="confirmPin-icon" slot="end" name="eye" (click)="togglePassword('confirmPin')"></ion-icon>
+            </ion-item>
+            <div *ngIf="form.controls['confirmPin'].touched && form.controls['confirmPin'].invalid" class="error-message">Los PINs no coinciden.</div>
+    
+            <ion-button id="registerButton" shape="round" expand="block" class="register-button" [disabled]="!isComplete" [class.complete]="isComplete" (click)="register()">SIGUIENTE</ion-button>
+        </div>
+    </form>
+    
+
+</ion-content>

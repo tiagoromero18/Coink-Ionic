@@ -96,10 +96,59 @@ img {
 }
 
 .number {
-  font-size: 19px;
+  font-size: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.underHeader{
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-end; 
+  height: 20vh;
+  margin: 24px;
+}
+
+.underHeader p{
+  font-size: 16px;
+  margin-left: 23.5px;
+  color: #757575;
+  font-family: 'Avenir LT Std', sans-serif;
+}
+
+.green-line {
+  background-color: #1EEA00;
+  height: 2px; /* Adjust the height as needed */
+  margin-left: 23.5px;
+  margin-right: 23.5px;
+}
+
+.custom-button{
+  --background: #D3D3D3;
+  color: white;
+  border-radius: 50%;
+}
+
+.custom-button.complete {
+  --background: #1EEA00;
+}
+
+.custom-button ion-icon {
+  color: white;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Full viewport height to center vertically */
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ion-content {

@@ -1,11 +1,14 @@
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Avenir+LT+Std:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <ion-header>
   <ion-toolbar>
     <ion-buttons style="margin-left: 5px;" slot="start">
-      <img src="assets/numberImg/back.png" alt="Centered Image">
+      <img src="assets/numberImg/back.png" alt="Centered Image" (click)="back()">
     </ion-buttons>
       <div>
         <ion-title style="color: #004B40; font-family: 'Montserrat', sans-serif; font-size: 16px; text-align: center;" > NÚMERO CELULAR </ion-title>
@@ -15,72 +18,87 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('1')" class="number-button">
-          <span class="number">1</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('2')" class="number-button">
-          <span class="number">2</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('3')" class="number-button">
-          <span class="number">3</span>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('4')" class="number-button">
-          <span class="number">4</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('5')" class="number-button">
-          <span class="number">5</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('6')" class="number-button">
-          <span class="number">6</span>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('7')" class="number-button">
-          <span class="number">7</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('8')" class="number-button">
-          <span class="number">8</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('9')" class="number-button">
-          <span class="number">9</span>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="4">
-          <img src="assets/numberImg/Backspace.svg" class="left-image" alt="icon">
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" (click)="addNumber('0')" class="number-button">
-          <span class="number">0</span>
-        </ion-button>
-      </ion-col>
-      <ion-col size="4">
-        <ion-button expand="block" class="number-button" shape="round">
-          <ion-icon name="checkmark"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+  <div class="underHeader">
+    <img src="assets/numberImg/Oink.svg" alt="Centered Image"> <p>Para comenzar, por favor ingresa <strong> tu número celular. </strong> </p>
+  </div>
+
+  <div class="green-line"></div>
+
+  <div style="display: flex; justify-content: center; align-items: center; height: 20vh; font-size: 24px;">
+    <div id="number-display">( XXX - XXXXXXX )</div>
+  </div>
+  
+  <div class="center-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('1')" class="number-button">
+            <span class="number">1</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('2')" class="number-button">
+            <span class="number">2</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('3')" class="number-button">
+            <span class="number">3</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('4')" class="number-button">
+            <span class="number">4</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('5')" class="number-button">
+            <span class="number">5</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('6')" class="number-button">
+            <span class="number">6</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('7')" class="number-button">
+            <span class="number">7</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('8')" class="number-button">
+            <span class="number">8</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('9')" class="number-button">
+            <span class="number">9</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+            <img src="assets/numberImg/Backspace.svg" class="left-image" alt="icon" (click)="backspace()">
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" (click)="addNumber('0')" class="number-button">
+            <span class="number">0</span>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button shape="round" class="custom-button" [class.complete]="isComplete" (click)="checkComplete()">
+            <ion-icon slot="icon-only"  name="checkmark"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+
 </ion-content>
