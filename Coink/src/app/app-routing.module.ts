@@ -17,6 +17,11 @@ const routes: Routes = [
       m.RegisterDataPageModule)
   },
   {
+    path: 'legalInfo',
+    loadChildren: () => import('./legalInfo/legalInfo.module').then(m =>
+      m.LegalInfoPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

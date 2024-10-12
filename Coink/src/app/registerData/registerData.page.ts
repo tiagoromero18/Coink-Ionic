@@ -93,7 +93,7 @@ export class RegisterDataPage implements OnInit {
       await this.presentAlert('Los correos electrónicos no coinciden.');
     }
     else{
-      this.navCtrl.navigateForward('/home')
+      this.navCtrl.navigateForward('/legalInfo')
     }
   }  
 }

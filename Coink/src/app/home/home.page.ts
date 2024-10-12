@@ -10,15 +10,15 @@ export class HomePage {
 
   constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
+  register(){
+    this.navCtrl.navigateForward('/registerNumber')
+  }
 
-    const registerButton = document.getElementById('registerButton');
-    console.log(registerButton)
-    if (registerButton) {
-      registerButton.addEventListener('click', () => {
-        this.navCtrl.navigateForward('/registerNumber');
-      });
-    }
+  login(){
+    alert("El login no se ha creado")
+  }
+
+  ngOnInit() {
 
     const contentElement = document.getElementById('content');
     if(contentElement){
