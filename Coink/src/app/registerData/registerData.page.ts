@@ -24,12 +24,12 @@ export class RegisterDataPage implements OnInit {
       confirmEmail: ['', [Validators.required, Validators.email]],
       pin: ['', [Validators.required, Validators.pattern(/^\d{4}$/)]],
       confirmPin: ['', [Validators.required, Validators.pattern(/^\d{4}$/)]]
-    });
+    }); //Construccion de las varibles y sus requerimientos del formulario con Ng
   }
 
   back(){
     this.navCtrl.navigateForward('/registerNumber')
-  }
+  } //Nos devolvemos a la pagina pasada
 
   ngOnInit() {
     const apiKey = '030106';
@@ -43,7 +43,7 @@ export class RegisterDataPage implements OnInit {
       .catch(error => console.error('Error:', error));
     this.form.valueChanges.subscribe(() => {
       this.validateForm();
-    });
+    }); //intento de conexión con la api (uso de fetch) presenta un error ya que la llave de la api es incorrecta
   }
 
   async presentAlert(message: string) {
@@ -53,7 +53,7 @@ export class RegisterDataPage implements OnInit {
       buttons: ['OK']
     });
     await alert.present();
-  }
+  } 
 
   togglePassword(field: string) {
     const input = document.getElementById(field) as HTMLIonInputElement;
@@ -66,7 +66,7 @@ export class RegisterDataPage implements OnInit {
       const iconName = input.type === 'password' ? 'eye' : 'eye-off';
       icon.name = iconName;
     }
-  }
+  } //Con esta funcion cambias el tipo de contraseña despues de darle al boton del ojo y tambien cambiamos el estilo del ojo
 
   validateForm() {
     const pinInput = document.getElementById('pin') as HTMLIonInputElement;
@@ -82,7 +82,7 @@ export class RegisterDataPage implements OnInit {
     const allFilled = this.form.valid && email === confirmEmail && pin === confirmPin;
   
     this.isComplete = allFilled;
-  }
+  } //Validamos que todas las entradas del formulario esten correctas y correspondan el email y el pin
   
 
   async register() {
@@ -95,5 +95,5 @@ export class RegisterDataPage implements OnInit {
     else{
       this.navCtrl.navigateForward('/legalInfo')
     }
-  }  
+  }  //Si encontramos algun problema saca error, si no pasa a la pagina siguiente
 }

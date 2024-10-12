@@ -1,105 +1,12 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-#content{
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full height of the viewport */
-}
-
-.gridsc{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-img {
-  max-width: 100%; /* Ensure the image scales properly */
-  max-height: 100%; /* Ensure the image scales properly */
-}
-
-.hidden {
-  display: none;
-}
-
-.button-container {
-  margin-left: 23.5px;
-  margin-right: 23.5px;
-}
-
 .register-button {
   height: 50px;
-  width: 100%; /* Full width minus the container's left and right margins */
-  margin-bottom: 16px; /* Space between buttons */
+  width: 100%; 
+  margin-bottom: 16px; 
   --background: #1EEA00;
   --color: #004B40;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-}
-
-.login-button {
-  height: 50px;
-  width: 100%; /* Full width minus the container's left and right margins */
-  margin-bottom: 16px; /* Space between buttons */
-  --background: #004B40;
-  --color: #FFFFFF;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
-.number-button {
-  --background: transparent;
-  --color: #004B40;
-  --border-width: 0;
-  --box-shadow: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500; /* Medium */
-  padding: 0;
-  margin: 0;
-  height: auto;
-  width: auto;
-  display: inline-block;
-}
-
-.number {
-  font-size: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .underHeader{
@@ -122,43 +29,22 @@ img {
   font-family: 'Montserrat', sans-serif;
 }
 
-.underHeader span{
-  margin-left: 5px;
-}
-
 .text-content {
   text-align: left;
-  height: 18vh;
-  margin: 24px; /* Adjust margin as needed */
-  max-width: 100%; /* Ensures the text stays within the image margins */
+  height: 10vh;
+  margin: 24px; 
+  max-width: 100%; 
 }
 
 .green-line {
   background-color: #1EEA00;
-  height: 2px; /* Adjust the height as needed */
+  height: 2px; 
   margin-left: 23.5px;
   margin-right: 23.5px;
 }
 
-.custom-button{
-  --background: #D3D3D3;
-  color: white;
-  border-radius: 50%;
-}
-
 .custom-button.complete {
   --background: #1EEA00;
-}
-
-.custom-button ion-icon {
-  color: white;
-}
-
-.center-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; /* Full viewport height to center vertically */
 }
 
 .custom-container {

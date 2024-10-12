@@ -13,6 +13,6 @@ export class welcomePage {
 
   continue(){
     this.navCtrl.navigateForward('/home')
-  }
+  } // continua al home ya que acabo el ciclo de registro
   
 }

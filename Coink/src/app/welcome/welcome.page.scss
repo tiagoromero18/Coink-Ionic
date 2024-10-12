@@ -1,5 +1,5 @@
 ion-content {
-    --background: rgba(211, 211, 211, 0.8); /* Gris opaco */
+    --background: #00000033;
   }
 
 
@@ -20,9 +20,9 @@ ion-content {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white; /* Fondo blanco para el contenedor */
-    width: 80vw; /* Ancho del contenedor relativo al viewport */
-    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    background-color: white; 
+    width: 80vw;
+    max-width: 600px;
   }
 
   .container img {
@@ -46,8 +46,8 @@ ion-content {
 
   .register-button {
     height: 50px;
-    width: 100%; /* Full width minus the container's left and right margins */
-    margin-bottom: 16px; /* Space between buttons */
+    width: 100%; 
+    margin-bottom: 16px;
     --background: #1EEA00;
     --color: #004B40;
     font-size: 16px;

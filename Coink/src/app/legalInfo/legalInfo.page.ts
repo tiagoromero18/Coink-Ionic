@@ -17,14 +17,14 @@ export class legalInfoPage {
       checkbox.classList.add('checked');
     } else {
       checkbox.classList.remove('checked');
-    }
+    } //Cuando se hace check al checkbox se habilita el boton a traves de estilos de css al boton de continuar
   }
 
   back(){
     this.navCtrl.navigateForward('/registerData')
-  }
+  } //ir un paso atras
 
   accept(){
     this.navCtrl.navigateForward('/welcome')
-  }
+  } //pasar a la pagina final
 }
