@@ -8,18 +8,23 @@
   </div>
   <div id="main-content" class="hidden">
     <!-- Primera sección con imagen centrada -->
-    <div style="display: flex; justify-content: center; align-items: flex-end; height: 33.33vh;">
+    <div style="display: flex; justify-content: center; align-items: flex-end; height: 45vh;">
       <img src="assets/homeImg/coinkhomeimg.svg" alt="Centered Image">
     </div>
 
     <!-- Segunda sección con texto centrado en la parte superior -->
-    <div style="display: flex; justify-content: center; align-items: center; height: 33.33vh;">
-      <h1 style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 18pt; color: #1EEA00;"> LA ALCANCÍA QUE SIEMPRE TE ACOMPAÑA </h1>
+    <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+      <h1 style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 18px; color: #1EEA00; line-height: 24px;"> LA ALCANCÍA QUE SIEMPRE TE ACOMPAÑA </h1>
     </div>
 
     <!-- Tercera sección con dos botones centrados uno debajo del otro -->
-    <div style="display: flex; justify-content: center; align-items: center; height: 33.33vh; flex-direction: column;">
-      <ion-button expand="block">Block</ion-button> <ion-button expand="full">Full</ion-button>
+    <div class="button-container" style="display: flex; justify-content: center; align-items: center; height: 35vh; flex-direction: column;">
+
+      <div style="width: 100%;">
+        <ion-button id="registerButton" shape="round" expand="block" class="register-button" > REGÍSTRATE </ion-button>
+        <ion-button id="registerButton" shape="round" expand="block" class="login-button" > INGRESA </ion-button>
+      </div>
+
     </div>
   </div>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
   ngOnInit() {
+
+    const registerButton = document.getElementById('registerButton');
+    console.log(registerButton)
+    if (registerButton) {
+      registerButton.addEventListener('click', () => {
+        this.navCtrl.navigateForward('/registerNumber');
+      });
+    }
 
     const contentElement = document.getElementById('content');
     if(contentElement){
