@@ -14,4 +14,6 @@ QUE HARIA MEJOR Y QUE CAMBIARIA:
 
 > Uso de algun cifrado para guardar el pin, ya que al usar https no se evidencia el problema que se puede evidenciar en http el cual no tiene cifrado y maneja texto plano, por lo tanto poder interceptar con un MITM el pin introducido por un supuesto usuario
 
-> Mas usos de patrones de Diseño 
+> Mas usos de patrones de Diseño
+
+>Tuve un problema con las dependecias y mi computador lo cual no me dejo crear el apk, sin embargo el proyecto se puede ver desde chrome
