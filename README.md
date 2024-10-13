@@ -16,4 +16,4 @@ QUE HARIA MEJOR Y QUE CAMBIARIA:
 
 > Mas usos de patrones de Diseño
 
->Tuve un problema con las dependecias y mi computador lo cual no me dejo crear el apk, sin embargo el proyecto se puede ver desde chrome
+>Tuve un problema con las dependecias y mi computador lo cual no me dejo crear el apk, sin embargo el proyecto se puede ver desde chrome, si de hecho alguien sabe porque no me creo que apk con cordova agradeceria me explicara
